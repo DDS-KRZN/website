@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<h1>Contacts</h1>
+<label for="name">Name:</label>
+<input type="text" id="name"><br><br>
+<!--<nobr>Name: </nobr> <input type="text">-->
+<label for="birthday">Birthday</label>
+<input type="date" id="birthday"><br><br>
+<!--<nobr>Birthday: </nobr> <input type="date">-->
+<label for="email">Enter your email:</label>
+<input type="email" id="email">
+
+<p><b>Gender:</b></p>
+<p><input name="gender" type="radio" value="M">Man</p>
+<p><input name="gender" type="radio" value="W">Woman</p>
+
+<label for="country">Choose a coutry:</label>
+<select id="country" name="country">
+    <option value="ukraine">Ukraine</option>
+    <option value="georgia">Georgia</option>
+    <option value="usa">USA</option>
+</select>
+<br><br>
+
+<input type="checkbox" id="acceptTerms" name="acceptTerms" value="Accept">
+<label for="acceptTerms">I accept terms and conditions</label><br>
+<textarea name="message" rows="10" cols="30">Notes</textarea><br><br>
+<label for="photo">Photo:</label>
+<input type="file" id="photo"><br><br>
+<input type="submit" value="Submit">
+</body>
+</html>
