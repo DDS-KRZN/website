@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="assets/css/layout.css">
     <title>Media</title>
 </head>
 <body>
-<h1>Media</h1>
-<h3><a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="slider.html">Slider</a>
-    <a href="table.html">Table</a></h3>
-<h3>Sound: </h3>
-<audio controls src="public/sound/sound1.mp3"></audio><p></p>
-<h3>Video: </h3>
-<video controls src="public/videos/videoplayback.mp4"></video><p></p>
-<h3>YouTube Video (iframe): </h3>
-<iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/5qap5aO4i9A"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+<header class="header"><p><img src="assets/img/email.png" height="30" width="30" alt="Logo" hspace="10">Header...</p></header>
+<div class="container">
+    <main class="center column">
+        <h3>Sound: </h3>
+        <audio controls src="public/sound/sound1.mp3"></audio><p></p>
+        <h3>Video: </h3>
+        <video controls src="public/videos/videoplayback.mp4"></video><p></p>
+        <h3>YouTube Video (iframe): </h3>
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/5qap5aO4i9A"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <br><br><br>
+    </main>
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="slider.html">Slider</a></li>
+        </ul>
+        <ul>
+            <li><a href="table.html">Table</a></li>
+        </ul>
+    </nav>
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+    <footer class="footer"><p><img src="assets/img/email.png" height="20" width="20" alt="Logo" hspace="10">Footer...</p></footer>
+</div>
 </body>
 </html>
