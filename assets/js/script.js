@@ -8,6 +8,7 @@ function Slide(index, title, background, link ) {
 
 const Slider = {
     current: 0,
+    let: nowShow = true,
     slides: [],
     initSlider: function(slides){
         let index = 0;
@@ -65,7 +66,6 @@ const Slider = {
         this.current = next;
     },
     hideSlide: function (){
-        let next;
         document.getElementById("slide-"+0).style.height = "0%";
         document.getElementById("slide-"+1).style.height = "0%";
         document.getElementById("slide-"+2).style.height = "0%";
@@ -74,7 +74,6 @@ const Slider = {
         document.getElementById("slide-"+2).style.visibility = 'hidden';
     },
     showSlide: function (){
-        let next;
         document.getElementById("slide-"+0).style.height = "100%";
         document.getElementById("slide-"+1).style.height = "100%";
         document.getElementById("slide-"+2).style.height = "100%";

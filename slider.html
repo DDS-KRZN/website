@@ -37,8 +37,7 @@
         <button class="button" onclick="Slider.nextSlide()">Next</button>-->
         <input class="button" id="prev" type="button" value="Prev"/>
         <input class="button" id="next" type="button" value="Next"/>
-        <input class="button-blue" id="show" type="button" value="Show"/>
-        <input class="button-blue" id="hide" type="button" value="Hide"/>
+        <input class="button-blue" id="show" type="button" value="Show/Hide slider"/>
 
         <script>
             function handler1(e){
@@ -48,10 +47,18 @@
                 Slider.nextSlide();
             }
             function handler3(e){
-                Slider.showSlide();
+                if (nowShow == true){
+                    Slider.hideSlide();
+                    nowShow = false;
+                }
+                else {
+                    Slider.showSlide();
+                    nowShow = true;
+                }
+
             }
             function handler4(e){
-                Slider.hideSlide();
+
             }
 
             prev.addEventListener("click", handler1);
