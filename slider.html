@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="assets/css/layout.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Slider</title>
+    <script src="assets/js/script.js"></script>
+    <script>
+        window.onload = function() {
+            // ви можете зробити скільки завгодно слайдів
+            let slides = [
+                {
+                    title: "Karazin University",
+                    background: "https://www.kitangry.com/wp-content/uploads/2020/01/Karazin-university.jpg",
+                    link: "https://karazin.ua/"
+                }, {
+                    title: "Computer Science Department",
+                    background: "https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/best-laptop-for-computer-science-hero15808348353268.jpg",
+                    link: "http://www-csd.univer.kharkov.ua/"
+                }, {
+                    title: "Discord",
+                    background: "https://i.pinimg.com/originals/d0/a3/c3/d0a3c3ffade9804fad4075b13323d31d.png",
+                    link: "https://discord.com/"
+                }
+            ]
+            Slider.initSlider(slides);
+        };
+    </script>
 </head>
 <body>
-<h1>Slider</h1>
-<h3><a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="media.html">Media</a>
-    <a href="contact.html">Contact</a>
-    <a href="table.html">Table</a></h3>
+<header class="header"><p><img src="assets/img/email.png" height="30" width="30" alt="Logo" hspace="10">Header...</p></header>
+<div class="container">
+    <main class="center column">
+        <div id="slider"></div>
+        <!--<button class="button" onclick="Slider.prevSlide()">Prev</button>
+        <button class="button" onclick="Slider.nextSlide()">Next</button>-->
+        <input class="button" id="prev" type="button" value="Prev"/>
+        <input class="button" id="next" type="button" value="Next"/>
+        <input class="button-blue" id="show" type="button" value="Show"/>
+        <input class="button-blue" id="hide" type="button" value="Hide"/>
+
+        <script>
+            function handler1(e){
+                Slider.prevSlide();
+            }
+            function handler2(e){
+                Slider.nextSlide();
+            }
+            function handler3(e){
+                Slider.showSlide();
+            }
+            function handler4(e){
+                Slider.hideSlide();
+            }
+
+            prev.addEventListener("click", handler1);
+            next.addEventListener("click", handler2);
+            show.addEventListener("click", handler3);
+            hide.addEventListener("click", handler4);
+        </script>
+
+
+    </main>
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <ul>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="media.html">Media</a></li>
+        </ul>
+        <ul>
+            <li><a href="table.html">Table</a></li>
+        </ul>
+    </nav>
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+    <div class="push"></div>
+</div>
+<div class="footer-wrapper">
+    <footer class="footer"><p><img src="assets/img/email.png" height="20" width="20" alt="Logo" hspace="10">Footer...</p></footer>
+</div>
 </body>
 </html>
