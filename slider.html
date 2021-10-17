@@ -38,6 +38,7 @@
         <input class="button" id="prev" type="button" value="Prev"/>
         <input class="button" id="next" type="button" value="Next"/>
         <input class="button-blue" id="show" type="button" value="Show/Hide slider"/>
+        <button class="button-red" id="toggle" onclick="myFunction()">Start</button>
 
         <script>
             function handler1(e){
@@ -65,6 +66,23 @@
             next.addEventListener("click", handler2);
             show.addEventListener("click", handler3);
             hide.addEventListener("click", handler4);
+            function myFunction(){
+
+                toggle.addEventListener("click", (event)=>{
+                    if (event.target.classList.contains('start')){
+                        event.target.innerHTML = 'Start';
+                        clearInterval(interval)
+                    } else {
+                        event.target.innerHTML = 'Stop';
+                        interval = setInterval(()=>{
+                            Slider.nextSlide();
+                        },1000)
+                    }
+                    event.target.classList.toggle('start')
+                })
+            }
+
+
         </script>
 
 
