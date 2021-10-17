@@ -104,3 +104,15 @@ a.link {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.button-red {
+    background: #FA8072	;
+    border-radius: 25px;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    font-weight: normal;
+    font-size: 14px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
