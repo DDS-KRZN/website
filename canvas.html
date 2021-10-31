@@ -4,13 +4,36 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Canvas</title>
     <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/canvas.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/canvas.js"></script>
+    <script>
+        window.onload = function (){
+            canvas('#draw', {
+                width: 500,
+                height: 300,
+                strokeWidth: 5,
+                strokeColor: "#df4b26"
+            })
+        }
+    </script>
 </head>
 <body>
 <header class="header"><p><img src="assets/img/email.png" height="30" width="30" alt="Logo" hspace="10">Header...</p></header>
 <div class="container">
     <main class="center column">
         <article>
-            <!---->
+            <canvas id="draw">
+                <div class="toolbar" id="toolbar"></div>
+            </canvas>
+            <br><input class="btn" id="clear" type="button" value="Clear">
+            <!--<button class="btn" id="clearBtn" onclick="canvas">Clear</button>-->
+            <script>
+                function myFunction(){
+                    canvas.clear();
+                }
+                clear.addEventListener("click", myFunction())
+            </script>
         </article>
     </main>
     <nav class="left column">
